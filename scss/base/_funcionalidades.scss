@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap');
+
+*{
+    margin: 0px; padding: 0px;
+}
+
+$color-1: rgb(255, 255, 255);
+$color-2: rgb(0, 0, 0);
+$color-3: #FD7F42;
+$color-4: #f6ded4;
+$color-5: #6c50fc;
+$color-6: #feb5e3;
+$color-7: #555;
+
+$font-size: 14px, 20px, 28px, 56px;
+
+h1{
+    font-size: nth($font-size , 4);
+}
+
+h2{
+    font-size: nth($font-size , 3);
+}
+
+h3{
+    font-size: nth($font-size , 2);
+}
+
+p{
+    font-size: nth($font-size , 1);
+}
+
+/* Extend */
+%cards{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+div.cards {
+    gap: 56px; 
+    @extend %cards
+}
+
+
+/* Mixin */
+@mixin section($relative, $center, $flex){
+    position: $relative;
+    text-align: $center;
+    display: $flex;
+}
+
+section.content {
+    @include section (relative, center, flex)
+}
