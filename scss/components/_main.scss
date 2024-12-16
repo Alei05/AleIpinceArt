@@ -81,6 +81,7 @@ div.card {
     box-shadow: 0 2px 15px rgba(232, 232, 232, 0.1);
     padding: 20px;
     text-align: center; 
+    transition: 1s;
 
     img {
         width: 100%; 
@@ -98,7 +99,34 @@ div.card {
             color: $color-1;
           }
     }
+    &:hover{
+        transform: scale(1.05);
+    }
 }
+
+.logos_container {
+    width: 100%; 
+    max-width: 100%;
+    margin: 0 auto; 
+    padding: 20px; 
+    overflow: hidden; 
+  }
+  
+  .logos {
+    display: flex;        
+    flex-wrap: wrap;          
+    justify-content: center; 
+    align-items: center;  
+    gap: 24px;                 
+  }
+  
+  .logos img {
+    display: block;
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+  }
+
 
 /* Content galery */
 .grid-container{

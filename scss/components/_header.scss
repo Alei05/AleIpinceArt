@@ -15,6 +15,25 @@ nav {
     align-items: center;
     width: 100%;
 
+    .menu-icon {
+        display: none;
+        cursor: pointer;
+        z-index: 15;
+        
+        .bar {
+            display: block;
+            width: 30px;
+            height: 4px;
+            margin: 6px auto;
+            background-color: $color-2;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
   ul {
       list-style: none;
       display: flex;
